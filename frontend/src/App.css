@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Main Page */
+
+.student-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+
+    background:
+        radial-gradient(circle at top left, #e9e2d8, transparent 45%),
+        radial-gradient(circle at bottom right, #d8c8b8, transparent 40%),
+        #f4f1ec;
+}
+
+/* Main Card */
+
+.student-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 45px 42px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 60px rgba(64, 42, 26, 0.10),
+        0 2px 10px rgba(64, 42, 26, 0.04);
+
+    backdrop-filter: blur(20px);
+
+    animation: cardAppear 0.8s ease;
+}
+
+/* Header */
+
+.form-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.form-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #4a3428;
+    color: #ffffff;
+
+    border-radius: 16px;
+
+    font-size: 24px;
+
+    box-shadow: 0 8px 20px rgba(74, 52, 40, 0.18);
+}
+
+.form-subtitle {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    color: #9a7a62;
+
+    margin-bottom: 12px;
+}
+
+.form-header h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 32px;
+    font-weight: 600;
+
+    color: #30251e;
+
+    margin-bottom: 12px;
+}
+
+.form-description {
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #8b8178;
+}
+
+/* Form */
+
+.student-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #4a382c;
+}
+
+.input-group input {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 16px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+
+    color: #34271f;
+    background: #faf8f6;
+
+    border: 1px solid #e8e0d8;
+    border-radius: 10px;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: #b5aaa0;
+}
+
+.input-group input:hover {
+    border-color: #b49a83;
+}
+
+.input-group input:focus {
+    background: #ffffff;
+
+    border-color: #6a4934;
+
+    box-shadow: 0 0 0 4px rgba(106, 73, 52, 0.08);
+}
+
+/* Button */
+
+.submit-btn {
+    width: 100%;
+    height: 55px;
+
+    margin-top: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #493326;
+    color: #ffffff;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.35s ease;
+}
+
+.submit-btn span {
+    font-size: 19px;
+
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #6b4a35;
+
+    box-shadow: 0 10px 25px rgba(73, 51, 38, 0.20);
+
+    transform: translateY(-2px);
+}
+
+.submit-btn:hover span {
+    transform: translateX(5px);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* Footer */
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.form-footer p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    color: #b1a499;
+}
+
+.footer-line {
+    height: 1px;
+    width: 35px;
+
+    background: #e5ddd5;
+}
+
+/* Animation */
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+
+    .student-card {
+        padding: 35px 24px;
+        border-radius: 18px;
+    }
+
+    .form-header h1 {
+        font-size: 27px;
+    }
+
+    .form-description {
+        font-size: 13px;
+    }
+
+}
